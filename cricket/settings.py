@@ -144,11 +144,17 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
-STATICFILES_DIRS = ('admin', 'rest_framework')
+# STATICFILES_DIRS = ('admin', 'rest_framework')
+
 
 STATIC_URL = '/static/'
 
 STATIC_ROOT = 'static'
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, "admin"),
+#     os.path.join(BASE_DIR, "rest_framework"),
+# ]
 
 FIXTURE_DIRS = (
    os.path.join(BASE_DIR, 'fixtures'),
