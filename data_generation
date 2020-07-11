@@ -1,0 +1,30 @@
+
+for team1 in Team.objects.all():
+	for team2 in Team.objects.all():
+		if team1 == team2:
+			continue
+		json = {'team1': team1, 'team2': team2, 'winner': random.choice([team1, team2])}
+		Matches.objects.create(**json)
+
+
+
+curl -X POST http://127.0.0.1:8000/api/login/ -d '{"username":"admin", "password": "ustech@123"}' -H 'Content-Type: application/json'
+
+
+
+for team in Team.objects.all():
+	m = Matches.objects.filter(Q(team1=team) | Q(team2=team) & Q(winner=team)).count()
+	print(m)
+
+
+curl -X PATCH http://127.0.0.1:8000/info/team/1/ -d '{"name": "Mumbai Indians"}' -H 'Content-Type: application/json'
+
+
+
+curl -X POST http://127.0.0.1:8000/info/player/ -d '{"team": "http://127.0.0.1:8000/info/team/1/", "first_name": "Rohit", "image_uri": "https://domain.com/rs.png", "last_name": "Sharma", "country": "India"}' -H 'Content-Type: application/json'
+
+curl -X GET http://utsinterview-env.uvppnpfbjm.us-east-1.elasticbeanstalk.com/info/player/1/?format=json -H 'Authorization: Token d5cc739c3c12e861ad3e0d607aa76cdb84c41755'
+
+
+
+{"username": "admin", "password": "ustech@123"}
