@@ -243,8 +243,8 @@ Delete Match:
 `curl -X DELETE {{host}}/info/matches/174/`
 
 
-`Username: hassan`
-`Password: admin`
+`Username: admin`
+`Password: ustech@123`
 
 
 
