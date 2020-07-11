@@ -247,6 +247,16 @@ Delete Match:
 `Password: ustech@123`
 
 
+#Application is hosted using Elastic Beanstalk by AWS here:
+http://mhraza95.pythonanywhere.com/team
+
+#Browsable APIs can be checked here live:
+http://mhraza95.pythonanywhere.com/info/
+
+API level Auth is disabled purposefully for easier navigation of all GET APIs using interface.
+http://mhraza95.pythonanywhere.com/admin/ panel can be used to alternatively perform CRUD operations on various models.
+
+Username: admin Password: ustech@123
 
 
 
